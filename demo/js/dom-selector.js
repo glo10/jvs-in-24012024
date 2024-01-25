@@ -21,7 +21,7 @@ item0.innerText = 'ajouté au début avec JS'
 ul.prepend(item0)
 
 // Créer un bouton
-const btnContent = '<button>appuyez sur ce bouton</button>' // string
+const btnContent = '<button id="btn" class="btn btn-success">appuyez sur ce bouton</button>' // string
 // Ajouter directement ce bouton juste après le ul
 ul.insertAdjacentHTML('afterend', btnContent)
 const btn = document.querySelector('button')
@@ -42,8 +42,16 @@ const btn = document.querySelector('button')
  */
 btn.addEventListener('click', btnActionCallback)
 
-function btnActionCallback() {
-    alert('click avec une fonction externe')
+function btnActionCallback(event) {
+    /**
+     * event un objet qui caractérise l'événement qui a eu lieu
+     *  De cet objet, on peut récupérer des informations de plusieurs types grâce
+     *  à la notation pointé, par exemple , event.type, event.target, etc.
+     *  Généralement on aura besoin d'aller récupérer les informations dans e.target
+     *  target réprésente la cible, c'est-à-dire l'élément HTML qui est à l'origine de l'événement
+     */
+    console.dir('objet event appelée event', event)
+    console.log('click avec une fonction externe')
 }
 
 /**
@@ -51,14 +59,17 @@ function btnActionCallback() {
  * Une exécution propre et spécifique
  * Autrement dit vous n'en aurez pas besoin en dehors de l'événement
  */
-btn.addEventListener('click', function() {
-    alert('click avec une fonction anonyme')
+btn.addEventListener('click', function(evt) {
+    console.dir('objet event appelée evt ici', evt)
+    console.log('click avec une fonction anonyme')
 })
 
 /**
  * Idem que la fonction anonyme mais avec la notation fléchée
  * qui apporte une différence au niveau du contexte d'exécution
  */
-btn.addEventListener('click', () => {
-    alert('click avec une fonction anonyme avec la notation fléchée')
+btn.addEventListener('click', (e) => {
+    console.dir('objet event appelée e', e)
+    alert(e.target.innerText)
+    console.log('click avec une fonction anonyme avec la notation fléchée')
 })
