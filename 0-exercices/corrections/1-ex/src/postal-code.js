@@ -5,8 +5,8 @@ export default class PostalCode {
   }
 
   getAll () { // Algo 5
-    const min = this.code * 100
-    const max = min + 100
+    const min = this.code * 1000
+    const max = min + 1000
     let i = min
     while (i < max) {
       this.postCodes.push(i)
