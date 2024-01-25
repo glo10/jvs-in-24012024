@@ -1,5 +1,16 @@
 # Exercice 3 : manipulation du DOM partie JavaScript
 
+---
+
+## Modalités
+
+1. Récupérez ce [code HTML](./ressources/exercice3.html) qui servira de base pour l'exercice
+2. Ajoutez votre JS dans ce fichier HTML
+
+---
+
+## Enoncé
+
 À l'aide des évènements, modifiez les propriétés CSS ou le contenu des éléments du bloc de gauche.
 Les actions à effectuer :
 - Ajoutez les options des sélections depuis javaScript ;
