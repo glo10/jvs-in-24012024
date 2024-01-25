@@ -2,10 +2,10 @@
 
 ---
 
-## Enoncé
+## Énoncé
 
 1. Récupérez [ce code HTML](./ressources/exercice2.html) qui servira du point de départ
-2. A l'aide des événements et du DOM, affichez les informations saisies dans le formulaire de gauche en direct sur la partie droite du document HTML récupéré.
+2. À l'aide des événements et du DOM, affichez les informations saisies dans le formulaire de gauche en direct sur la partie droite du document HTML récupéré.
 
 ### Spécifications techniques
 
