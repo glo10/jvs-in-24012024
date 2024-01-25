@@ -1,0 +1,6 @@
+const h1 = document.querySelector('h1')
+console.log('h1', h1)
+const h2 = document.querySelector('h2')
+console.log('h2', h2)
+const items = document.querySelectorAll('li')
+console.dir('li', items)
