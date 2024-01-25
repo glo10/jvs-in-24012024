@@ -7,8 +7,9 @@ for(let compteur = 0; compteur < cities.length; compteur++) {
 }
 
 // Avec for.. in ici les indices des villes
-for(let city in cities) {
-    // console.log('Ville : ', city)
+for(let i in cities) {
+    // console.log('Indice de la Ville : ', i)
+    // On peut récupérer la valeur avec cities[i]
 }
 
 for(let city of cities) {
