@@ -35,25 +35,15 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=48.896676&longitude=2.229
 fetch('https://jsonplaceholder.typicode.com/todos')
 .then(data => data.json())
 .then(todos => {
-    console.log('todos', todos)
     for(let i = 0; i < 9; i++) {
         const todo = todos[i]
-        let input = ''
-        if(todo.completed) {
-            input = `
+        const isCompleted = todo.completed ? 'checked':''
+        const input = `
             <div>
-            <input type="checkbox" id="scales" name="scales" checked/>
-            <label for="scales">${todo.title}</label>
+                <input type="checkbox" id="scales" name="scales" ${isCompleted} />
+                <label for="scales">${todo.title}</label>
             </div>
             `
-        } else {
-            input = `
-            <div>
-            <input type="checkbox" id="scales" name="scales" />
-            <label for="scales">${todo.title}</label>
-            </div>
-            `
-        }
         document.body.insertAdjacentHTML('afterbegin', input)
     }
 })
@@ -61,13 +51,4 @@ fetch('https://jsonplaceholder.typicode.com/todos')
 /**
  * Article news
  *  https://www.mac4ever.com/flux/json/content/all
- */
-
-/**
- * contenu d'une page web externe
- * à partir d'un bouton
- */
-
-/**
- * Fichier local et news
  */
