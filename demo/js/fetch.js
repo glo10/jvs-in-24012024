@@ -12,7 +12,7 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=48.896676&longitude=2.229
     document.body.append(header)
 })
 // KO
-.catch(error => console.error(error))
+.catch(error => console.error('erreur météo', error))
 
 
 
@@ -22,6 +22,10 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=48.896676&longitude=2.229
  * Template HTML
  */
 
+fetch('http://127.0.0.1:7000/https://m2iformation.fr')
+.then(res => res.text())
+.then(res => console.log('m2i', res))
+.catch(error => console.error('erreur m2i html', error))
 
 /**
  * TODOLIST à partir d'une API
