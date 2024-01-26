@@ -13,7 +13,6 @@
 
 À l'aide des évènements, modifiez les propriétés CSS ou le contenu des éléments du bloc de gauche.
 Les actions à effectuer :
-- Ajoutez les options des sélections depuis javaScript ;
 - Modifiez la couleur de fond ;
 - Modifiez les couleurs du titre et du texte ;
 - Modifiez les alignements du titre et du texte ;

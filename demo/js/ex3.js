@@ -6,7 +6,7 @@ inputBg.addEventListener('change', function(e) {
 
 const img = document.querySelector('img')
 
-img.addEventListener('mouseenter', function(e) {
+img.addEventListener('mouseenter', function() {
     /**
      * this = img
      * ie img.style.cursor = 'pointer'
